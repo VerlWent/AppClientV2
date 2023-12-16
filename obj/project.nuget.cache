@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "F/oocBOP8PgJsiJgmStqk6ANbY360dxbkgiAZMBn6sXjLQ+3QzmA1wf8s+gzE6v50sXbSbQ4Sq54++d90EcOLA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\VerlWent\\source\\repos\\ApplicationClientMVC\\ApplicationClientMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VerlWent\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

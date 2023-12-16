@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ApplicationClientMVC.ViewModels.TaskModel
+
+<h1>Редактирование</h1>
+
+<h4>Model</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditConfurm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="UserId" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Deadline" class="control-label"></label>
+                <input type="date" asp-for="Deadline" class="form-control" />
+                <span asp-validation-for="Deadline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Priority" class="control-label"></label>
+                <select asp-for="Priority" class="form-control">
+                    <option value="High">Высокий</option>
+                    <option value="Medium">Средний</option>
+                    <option value="Low">Низкий</option>
+                </select>
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Done" class="control-label"></label>
+                <input asp-for="Done" />
+                <span asp-validation-for="Done" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (TempData["DanderMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["DanderMessage"]
+    </div>
+}
